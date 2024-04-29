@@ -4,9 +4,9 @@
  */
 package pall_001;
 
-import java.awt.Graphics;
 
-/**
+import java.awt.Graphics;
+/*
  *
  * @author USUARIO
  */
@@ -14,6 +14,7 @@ public class Ffiguras extends javax.swing.JFrame {
 
      int [] puntosx = {40,0,0};
     int [] puntosy = {80,0,80};
+   
     /**
      * Creates new form Ffiguras
      */
@@ -98,20 +99,22 @@ public class Ffiguras extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Graphics g = jTextArea1.getGraphics();
         g.clearRect(0,0,jTextArea1.getWidth(), jTextArea1.getHeight());
-        Metodos.Circulo( jTextArea1.getGraphics(),80,15,200,200);
+      //  Metodos.Circulo( jTextArea1.getGraphics(),80,15,200,200);
+        Metodos.Circulo( jTextArea1.getGraphics(),80,15,15,15);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         Graphics g = jTextArea1.getGraphics();
         g.clearRect(0,0,jTextArea1.getWidth(), jTextArea1.getHeight());
-        Metodos.Cuadrado( jTextArea1.getGraphics(),80,15,200,200);
+       // Metodos.Cuadrado( jTextArea1.getGraphics(),80,15,200,200);
+         Metodos.Cuadrado( jTextArea1.getGraphics(),80,15,3,10);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
       Graphics g = jTextArea1.getGraphics();
         g.clearRect(0,0,jTextArea1.getWidth(), jTextArea1.getHeight());
-        //  Metodos.Triangulo( jTextArea1.getGraphics(), 80,80,10,10,150,10);
-           Metodos.Triangulo( jTextArea1.getGraphics(), 170,-1,40,215,300,215);
+         Metodos.Triangulo( jTextArea1.getGraphics(), 80,80,10,10,150,10);
+         
     }//GEN-LAST:event_jButton3ActionPerformed
 
     
