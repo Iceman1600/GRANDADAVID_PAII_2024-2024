@@ -4,6 +4,8 @@
  */
 package paii_002b;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author USUARIO
@@ -12,7 +14,11 @@ public class Screenl extends javax.swing.JFrame {
 
     
     public Screenl() {
-        
+          setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    setResizable(false);
+    setLocationRelativeTo(null);
+    setVisible(true);
+            
         initComponents();
     }
 
@@ -35,7 +41,6 @@ public class Screenl extends javax.swing.JFrame {
 
         jLabel1.setText("                         SPACE     WARS");
 
-        jTextField1.setText("jTextField1");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -55,6 +60,10 @@ public class Screenl extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(29, 29, 29))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -64,13 +73,9 @@ public class Screenl extends javax.swing.JFrame {
                         .addGap(97, 97, 97)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(143, 143, 143)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(118, 118, 118)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(71, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(29, 29, 29))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -107,8 +112,13 @@ public class Screenl extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      new ScreenII().setVisible(true);
+       Usuario u = new Usuario();
+    u.setNname(jTextField1.getText());
+    
+        new ScreenII( u).setVisible(true);
       this.dispose();
+                                            
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

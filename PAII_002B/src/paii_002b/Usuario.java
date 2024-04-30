@@ -11,6 +11,7 @@ package paii_002b;
  */
 public class Usuario {
 String nname;
+public Usuario(){}
     public Usuario(String n) {
         this.nname = n;
     }

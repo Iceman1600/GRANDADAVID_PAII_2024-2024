@@ -9,6 +9,7 @@ import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,6 +18,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.Random;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
@@ -52,10 +54,16 @@ public class ScreenII extends javax.swing.JFrame {
      private Timer bulletSelectionTimer; 
     
     public ScreenII(Usuario u){
+  //    initComponents();
     this.u = u;
+      
+   jLabel1 = new JLabel();
     jLabel1.setText(u.getNname());
+     jLabel1.setForeground(Color.black); 
+     Font font = new Font(jLabel1.getFont().getName(), Font.PLAIN, 20);
+        jLabel1.setFont(font);
     setTitle("SPACE WARS");
-    this.getContentPane().setBackground(Color.black);
+    //this.getContentPane().setBackground(Color.black);
     setSize(Width,Height);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setResizable(false);
@@ -95,7 +103,7 @@ public class ScreenII extends javax.swing.JFrame {
         };
      
          jPanel1.setBackground(Color.black);
-     //    h = new Human(300, 400);
+    
 
         // Agregar KeyListener al panel
         jPanel1.setFocusable(true);
@@ -281,8 +289,9 @@ public class ScreenII extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+             Usuario u = new Usuario();
             public void run() {
-                new ScreenII().setVisible(true);
+                new ScreenII(u ).setVisible(true);
             }
         });
     }

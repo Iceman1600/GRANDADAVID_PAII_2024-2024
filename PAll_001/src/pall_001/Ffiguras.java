@@ -16,6 +16,7 @@ public class Ffiguras extends javax.swing.JFrame {
     int [] puntosy = {80,0,80};
    
     /**
+     * 
      * Creates new form Ffiguras
      */
     public Ffiguras() {
